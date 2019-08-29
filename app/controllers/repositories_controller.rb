@@ -24,7 +24,7 @@ class RepositoriesController < ApplicationController
                 }
     end
 
-    body = resp.body.errors
+    body = resp.errors
 
     redirect_to root_path, flash: {message: body}
 
