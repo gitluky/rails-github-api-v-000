@@ -11,5 +11,7 @@
     <%= submit_tag("Create") %>
   <% end %>
 
-  <%= @repos %>
+  <%= @repos.each do |repo| %>
+    <%= repo['name'] %>
+  <% end %>
 </div>
