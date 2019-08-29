@@ -12,6 +12,6 @@
   <% end %>
 
   <%= @repos.each do |repo| %>
-    <li><%= repo['owner']['html_url'] %></li>
+    <li><%= repo[0]['name'] %></li>
   <% end %>
 </div>
