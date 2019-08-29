@@ -16,7 +16,10 @@ class RepositoriesController < ApplicationController
       req.headers['Accept'] = 'application/json'
       req.params['name'] = params[:name]
     end
-    redirect_to root_path
+
+    body = JSON.parse(resp.body)
+
+    redirect_to root_path, flash: {message: body}
 
   end
 
