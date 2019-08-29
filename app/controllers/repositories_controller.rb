@@ -18,7 +18,7 @@ class RepositoriesController < ApplicationController
                 }
     end
 
-    body = JSON.parse(resp.headers)
+    body = JSON.parse(resp.header)
 
     redirect_to root_path, flash: {message: body}
 
