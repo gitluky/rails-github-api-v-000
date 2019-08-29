@@ -20,7 +20,7 @@ class RepositoriesController < ApplicationController
 
     body = JSON.parse(resp.body)
 
-    redirect_to root_path, flash: {message: body}
+    redirect_to root_path, flash: {message: body['errors']}
 
   end
 
