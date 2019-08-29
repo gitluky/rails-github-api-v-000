@@ -17,7 +17,7 @@ class RepositoriesController < ApplicationController
       req.body = {
                   "name": params[:name],
                   "description": "Test repo for rails github api lab",
-                  "homepage": "https://github.com",
+                  "homepage": "https://github.com/#{params[:login]}/#{params[:name]}",
                   "private": false,
                   "has_issues": true,
                   "has_projects": true,
