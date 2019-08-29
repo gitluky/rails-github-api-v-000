@@ -11,7 +11,9 @@ class RepositoriesController < ApplicationController
   end
 
   def create
-
+    resp = Faraday.post("") do |req|
+      req.params['name'] = params[:name]
+    end
   end
 
 end
