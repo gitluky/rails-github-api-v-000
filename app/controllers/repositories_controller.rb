@@ -14,13 +14,7 @@ class RepositoriesController < ApplicationController
     resp = Faraday.post("https://api.github.com/user/repos") do |req|
       req.headers['Authorization'] = "token #{ session[:token] }"
       req.body = {
-                  "name": params[:name],
-                  "description": "Test repo for rails github api lab",
-                  "homepage": "https://github.com/#{params[:login]}/#{params[:name]}",
-                  "private": false,
-                  "has_issues": true,
-                  "has_projects": true,
-                  "has_wiki": true
+                  "name": params[:name]
                 }
     end
 
