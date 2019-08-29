@@ -2,6 +2,7 @@
   <h1>Repos</h1>
   <!-- List repositories and display username here! -->
   <%= @login %>
+  <%= session[:token] %>
   <%= flash[:message] %>
   <%= form_tag("/repositories/create", method: "post") do %>
     <%= hidden_field_tag :login, @login %>
